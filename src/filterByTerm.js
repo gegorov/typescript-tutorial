@@ -1,4 +1,3 @@
-"use strict";
 function filterByTerm(input, searchTerm) {
     if (!searchTerm)
         throw Error("searchTerm cannot be empty");

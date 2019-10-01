@@ -1,4 +1,4 @@
-function filterByTerm(input, searchTerm) {
+function filterByTerm(input: Array<string>, searchTerm: string) {
     if (!searchTerm) throw Error("searchTerm cannot be empty");
     if (!input.length) throw Error("input cannot be empty");
     const regex = new RegExp(searchTerm, "i");
@@ -6,4 +6,4 @@ function filterByTerm(input, searchTerm) {
         return arrayElement.url.match(regex);
     });
 }
-filterByTerm("input string", "java");
+filterByTerm(["string1", "string2", "string3"], "java");
