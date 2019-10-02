@@ -4,6 +4,11 @@ interface ILink {
     url: string;
 }
 
+interface IPost extends ILink {
+    title: string;
+    body: string;
+}
+
 const obj1: ILink = {
     url: "string1"
 };
@@ -14,6 +19,14 @@ const obj2: ILink = {
 
 const obj3: ILink = {
     url: "string3"
+};
+
+const post1: IPost = {
+    description: "TypeScript tutorial for beginners is a tutorial for all the JavaScript developers ...",
+    id: 1,
+    url: "www.valentinog.com/typescript/",
+    title: "TypeScript tutorial for beginners",
+    body: "some stuff here..."
 };
 
 const arrOfLinks: Array<ILink> = [obj1, obj2, obj3];
@@ -29,4 +42,4 @@ function filterByTerm(input: Array<ILink>, searchTerm: string) {
     });
 }
 
-filterByTerm(arrOfLinks, "java");
+filterByTerm(arrOfLinks, term);

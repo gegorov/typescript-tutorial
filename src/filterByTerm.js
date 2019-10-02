@@ -8,6 +8,15 @@ var obj2 = {
 var obj3 = {
     url: "string3"
 };
+var post1 = {
+    description: "TypeScript tutorial for beginners is a tutorial for all the JavaScript developers ...",
+    id: 1,
+    url: "www.valentinog.com/typescript/",
+    title: "TypeScript tutorial for beginners",
+    body: "some stuff here..."
+};
+var arrOfLinks = [obj1, obj2, obj3];
+var term = "java";
 function filterByTerm(input, searchTerm) {
     if (!searchTerm)
         throw Error("searchTerm cannot be empty");
@@ -18,4 +27,4 @@ function filterByTerm(input, searchTerm) {
         return arrayElement.url.match(regex);
     });
 }
-filterByTerm([obj1, obj2, obj3], "java");
+filterByTerm(arrOfLinks, term);
