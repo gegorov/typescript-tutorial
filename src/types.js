@@ -1,4 +1,5 @@
+"use strict";
 var aBoolean = false;
 console.log(typeof aBoolean); // "boolean"
-aBoolean = "Tom";
+// aBoolean = "Tom";
 console.log(typeof aBoolean); // "string"
