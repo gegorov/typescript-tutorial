@@ -5,6 +5,7 @@ interface ILink {
     [index: string]: any;
 }
 
+type Ilinks = Array<ILink>;
 interface IPost extends ILink {
     title: string;
     body: string;
@@ -30,11 +31,11 @@ const post1: IPost = {
     body: "some stuff here..."
 };
 
-const arrOfLinks: Array<ILink> = [obj1, obj2, obj3];
+const arrOfLinks: Ilinks = [obj1, obj2, obj3];
 
 const term: string = "java";
 
-function filterByTerm(input: Array<ILink>, searchTerm: string, lookupKey: string = "url"): Array<ILink> {
+function filterByTerm(input: Ilinks, searchTerm: string, lookupKey: string = "url"): Ilinks {
     if (!searchTerm) throw Error("searchTerm cannot be empty");
     if (!input.length) throw Error("input cannot be empty");
     const regex = new RegExp(searchTerm, "i");
